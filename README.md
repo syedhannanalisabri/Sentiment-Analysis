@@ -12,7 +12,7 @@ The project showcases skills in natural language processing (NLP), deep learning
 - **Deployment Ready**: Hosted on Streamlit Community Cloud with automatic updates via GitHub.
 
 ## Dataset
-The model was trained on the [Sentiment140 dataset]([[https://www.kaggle.com/datasets/kazanova/sentiment140](https://www.kaggle.com/datasets/abhi8923shriv/sentiment-analysis-dataset)](https://www.kaggle.com/datasets/abhi8923shriv/sentiment-analysis-dataset)It contains 1,600,000 tweets extracted using the twitter api . The tweets have been annotated (0 = negative, 4 = positive) and they can be used to detect sentiment
+The model was trained on the [Sentiment140 dataset](https://www.kaggle.com/datasets/abhi8923shriv/sentiment-analysis-dataset)It contains 1,600,000 tweets extracted using the twitter api . The tweets have been annotated (0 = negative, 4 = positive) and they can be used to detect sentiment
 
 ## Model Architecture
 - **Embedding Layer**: Converts tokenized tweets into 128-dimensional vectors (5,000-word vocabulary).
