@@ -8,7 +8,7 @@ import pickle
 import os
 
 # App configuration
-st.set_page_config(page_title="Twitter Sentiment Analysis", page_icon="🐦", layout="centered")
+st.set_page_config(page_title="Text Sentiment Analysis", page_icon="🐦", layout="centered")
 
 # Constants
 max_words = 5000
@@ -52,9 +52,9 @@ def predict_sentiment(text, model, tokenizer):
 
 # Main app
 def main():
-    st.title("🐦 Twitter Sentiment Analysis")
+    st.title("🐦 Sentiment Analysis")
     st.markdown("""
-    Enter a tweet below to predict its sentiment (positive, negative, or neutral).
+    Enter a Text below to predict its sentiment (positive, negative, or neutral).
     The model was trained on Twitter data using an LSTM neural network.
     """)
     
@@ -64,7 +64,7 @@ def main():
     if model and tokenizer:
         # Input form
         with st.form(key='tweet_form'):
-            tweet = st.text_area("Enter your tweet (max 280 characters):", max_chars=280, height=100)
+            tweet = st.text_area("Enter your text (max 280 characters):", max_chars=280, height=100)
             submit_button = st.form_submit_button("Analyze Sentiment")
             
             if submit_button and tweet.strip():
@@ -80,11 +80,11 @@ def main():
                     
                     st.success(f"**Predicted Sentiment**: {sentiment.capitalize()} {sentiment_emoji[sentiment]}")
                     st.info(f"**Confidence**: {prob:.4f}")
-                    st.write(f"**Tweet**: {tweet}")
+                    st.write(f"**Text**: {tweet}")
                 else:
                     st.error("Error processing the tweet. Please try again.")
             elif submit_button and not tweet.strip():
-                st.warning("Please enter a tweet to analyze.")
+                st.warning("Please enter a Text to analyze...")
     
     # Add some styling
     st.markdown("""
